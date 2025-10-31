@@ -4,7 +4,7 @@ COPY pom.xml .
 COPY src src
 RUN mvn clean package -DskipTests
 
-FROM ieclipse-temurin:17-jdk
+FROM eclipse-temurin:17-jdk
 WORKDIR /app
 # El nombre del JAR de tu proyecto (java-hello-world-0.0.1-SNAPSHOT.jar)
 ARG JAR_FILE=java-hello-world-0.0.1-SNAPSHOT.jar
